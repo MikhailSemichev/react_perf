@@ -1,0 +1,16 @@
+.app {
+  display: flex;
+}
+
+.menu {
+  flex-basis: 200px;
+  background-color: #FFFFEE;
+}
+
+.menu a {
+  display: block;
+}
+
+.main {
+  flex: 1;
+}
