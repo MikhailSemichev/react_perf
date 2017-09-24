@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import ListView from './ListView';
-import { loadList1 } from '../../../store/list1';
+import { loadList1, toggleTodo } from '../../../store/list1';
 
 @connect(
   state => ({
     list: state.list1
   }),
-  { loadList1 }
+  { loadList1, toggleTodo }
 )
-class Sample1 extends Component {
+class Sample2 extends Component {
   state = { itemText: '' };
 
   componentDidMount() {
@@ -19,7 +19,11 @@ class Sample1 extends Component {
 
   changeItemText = e => {
     this.setState({ itemText: e.target.value });
-  }
+  };
+
+  onToggle = item => {
+    this.props.toggleTodo(item.id, !item.isDone);
+  };
 
   render() {
     const { list } = this.props;
@@ -27,17 +31,19 @@ class Sample1 extends Component {
 
     return (
       <div>
-        Sample 1 [Optimized]
+        Sample 2 [Optimized]
         <div>
           <input type="text"
             value={itemText}
             onChange={this.changeItemText} />
         </div>
         <hr />
-        <ListView list={list} />
+        <ListView 
+          list={list}
+          onToggle={this.onToggle} />
       </div>
     );
   }
 }
 
-export default Sample1;
+export default Sample2;

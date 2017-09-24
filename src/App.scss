@@ -14,3 +14,13 @@
 .main {
   flex: 1;
 }
+
+.app-logo {
+  animation: app-logo-spin infinite 15s linear;
+  height: 80px;
+}
+
+@keyframes app-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

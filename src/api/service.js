@@ -3,7 +3,7 @@ export default {
 		return new Promise(res => {
 			setTimeout(() => {
 				res(data);
-			}, 1000);
+			}, 100);
 		});
 	}
 };
