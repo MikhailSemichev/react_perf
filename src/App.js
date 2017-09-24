@@ -9,7 +9,7 @@ import createAppStore from './store/createStore';
 import Sample1 from './pages/sample1/initial/Sample1';
 import Sample1_O from './pages/sample1/optimized/Sample1';
 
-import './App.css';
+import './App.scss';
 
 const history = createHistory();
 const store = createAppStore(history);
