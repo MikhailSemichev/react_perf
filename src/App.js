@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link, Route} from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import createHistory from 'history/createBrowserHistory';
 import { ConnectedRouter } from 'react-router-redux';
@@ -27,8 +27,8 @@ class App extends Component {
             </div>
 
             <div className="main">
-              <Route path="/sample1" component={Sample1}/>
-              <Route path="/sample1_o" component={Sample1_O}/>
+              <Route path="/sample1" component={Sample1} />
+              <Route path="/sample1_o" component={Sample1_O} />
             </div>
 
           </div>
