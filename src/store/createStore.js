@@ -3,6 +3,7 @@ import { routerReducer, routerMiddleware } from 'react-router-redux';
 import thunk from 'redux-thunk';
 
 import list1 from './list1';
+import list2 from './list2';
 
 export default function createAppStore(history) {
     const middleware = [thunk, routerMiddleware(history)];
@@ -18,6 +19,7 @@ export default function createAppStore(history) {
     return createStore(
         combineReducers({
             list1,
+            list2,
             router: routerReducer
         }),
         composeEnhancers(

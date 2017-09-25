@@ -41,7 +41,7 @@ function fakeData(count) {
 
     for (let i = 0; i < count; i++) {
         result.push({
-            id: i,
+            id: i + 1,
             name: `Todo Item ${i + 1}`,
             isDone: i % 3 === 0
         });
