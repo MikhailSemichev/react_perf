@@ -4,6 +4,8 @@ import thunk from 'redux-thunk';
 
 import list1 from './list1';
 import list2 from './list2';
+import filter from './filter';
+import date from './date';
 
 export default function createAppStore(history) {
     const middleware = [thunk, routerMiddleware(history)];
@@ -20,6 +22,8 @@ export default function createAppStore(history) {
         combineReducers({
             list1,
             list2,
+            filter,
+            date,
             router: routerReducer
         }),
         composeEnhancers(

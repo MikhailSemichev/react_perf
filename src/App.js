@@ -13,6 +13,9 @@ import Sample2 from './pages/sample2/initial/Sample2';
 import Sample2_O from './pages/sample2/optimized/Sample2';
 import Sample2_O2 from './pages/sample2/optimized2/Sample2';
 
+import Sample3 from './pages/sample3/initial/Sample3';
+import Sample3_O from './pages/sample3/optimized/Sample3';
+
 import logo from './logo.svg';
 import './App.scss';
 
@@ -34,7 +37,10 @@ class App extends Component {
 
               <Link to="/sample2">Sample 2</Link>
               <Link to="/sample2_o">Sample 2 (Optimized)</Link>
-               <Link to="/sample2_o2">Sample 2 (Optimized 2)</Link>
+              <Link to="/sample2_o2">Sample 2 (Optimized 2)</Link>
+
+              <Link to="/sample3">Sample 3</Link>
+              <Link to="/sample3_o">Sample 3 (Optimized)</Link>
             </div>
 
             <div className="main">
@@ -43,6 +49,8 @@ class App extends Component {
               <Route path="/sample2" component={Sample2} />
               <Route path="/sample2_o" component={Sample2_O} />
               <Route path="/sample2_o2" component={Sample2_O2} />
+              <Route path="/sample3" component={Sample3} />
+              <Route path="/sample3_o" component={Sample3_O} />
             </div>
 
           </div>
