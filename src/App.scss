@@ -1,3 +1,6 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "../node_modules/bootstrap/dist/css/bootstrap-theme.css";
+
 .app {
   display: flex;
 }
@@ -20,7 +23,22 @@
   height: 80px;
 }
 
+.date-picker {
+  display: inline-block;
+  width: 150px;
+}
+
 @keyframes app-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    height: 40px;
+
+    input {
+      margin-left: 10px;
+    }
 }
