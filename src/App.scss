@@ -1,6 +1,10 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
 @import "../node_modules/bootstrap/dist/css/bootstrap-theme.css";
 
+html, body, #root, .app {
+  height: 100%;
+}
+
 .app {
   display: flex;
 }
@@ -15,6 +19,19 @@
 }
 
 .main {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.todo-list {
+  overflow-y: auto;
+  height: 300px;
   flex: 1;
 }
 
