@@ -23,15 +23,20 @@ class ListView extends Component {
 
         return (
             <div className="todo-list">
-
-                <List
-                    height={300}
-                    rowCount={ids.length}
-                    rowHeight={40}
-                    rowRenderer={this.rowRenderer}
-                    width={500} />
-
+                <AutoSizer>
+                    {({ height, width }) => (
+                        <List
+                            key={ids.length}
+                            height={height}
+                            width={width} 
+                            rowCount={ids.length}
+                            rowHeight={40}
+                            rowRenderer={this.rowRenderer}
+                        />
+                    )}
+                </AutoSizer>
             </div>
+       
         );
     }
 }

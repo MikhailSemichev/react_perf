@@ -37,20 +37,20 @@ class App extends Component {
             <div className="menu">
               <img src={logo} className="app-logo" alt="logo" />
 
-              <Link to="/sample1">Sample 1</Link>
-              <Link to="/sample1_o">Sample 1 (Optimized)</Link>
+              <Link to="/sample1?react_perf">Sample 1</Link>
+              <Link to="/sample1_o?react_perf">Sample 1 (Optimized)</Link>
 
-              <Link to="/sample2">Sample 2</Link>
-              <Link to="/sample2_o">Sample 2 (Optimized)</Link>
-              <Link to="/sample2_o2">Sample 2 (Optimized 2)</Link>
+              <Link to="/sample2?react_perf">Sample 2</Link>
+              <Link to="/sample2_o?react_perf">Sample 2 (Optimized)</Link>
+              <Link to="/sample2_o2?react_perf">Sample 2 (Optimized 2)</Link>
 
-              <Link to="/sample3">Sample 3</Link>
-              <Link to="/sample3_o">Sample 3 (Optimized)</Link>
+              <Link to="/sample3?react_perf">Sample 3</Link>
+              <Link to="/sample3_o?react_perf">Sample 3 (Optimized)</Link>
 
-              <Link to="/sample4">Sample 4</Link>
-              <Link to="/sample4_o">Sample 4 (Optimized)</Link>
+              <Link to="/sample4?react_perf">Sample 4</Link>
+              <Link to="/sample4_o?react_perf">Sample 4 (Optimized)</Link>
 
-              <Link to="/sample5">Sample 5</Link>
+              <Link to="/sample5?react_perf">Sample 5</Link>
             </div>
 
             <div className="main">
