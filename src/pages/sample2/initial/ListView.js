@@ -1,5 +1,8 @@
 import React, { PureComponent } from 'react';
 
+import whyDidYouUpdate from '../../../utils/whyDidYouUpdate';
+
+// @whyDidYouUpdate
 class ListView extends PureComponent {
     render() {
         const { list, onToggle } = this.props;

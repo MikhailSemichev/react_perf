@@ -1,6 +1,12 @@
-import React, { PureComponent } from 'react';
+import React, { Component, PureComponent } from 'react';
 
-class ListView extends PureComponent {
+class ListView extends Component {
+
+    // shouldComponentUpdate(nextProps, nextState) {
+    //     return !shallowEqual(this.props, newProps) 
+    //         || !shallowEqual(this.state, newState);
+    // }
+
     render() {
         const { list } = this.props;
 

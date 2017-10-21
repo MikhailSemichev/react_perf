@@ -28,49 +28,75 @@ const history = createHistory();
 const store = createAppStore(history);
 
 class App extends Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <ConnectedRouter history={history}>
-          <div className="app">
+    arr = [];
+    A = () => {
+        for (let i = 0; i < 1000000; i++) this.arr.push(i);
+        this.B();
+        this.C();
+    };
 
-            <div className="menu">
-              <img src={logo} className="app-logo" alt="logo" />
+    B = () => {
+        for (let i = 0; i < 1000000; i++) this.arr.push(i);
+    };
 
-              <Link to="/sample1?react_perf">Sample 1</Link>
-              <Link to="/sample1_o?react_perf">Sample 1 (Optimized)</Link>
+    C = () => {
+        this.D();
+        this.E();
+    };
 
-              <Link to="/sample2?react_perf">Sample 2</Link>
-              <Link to="/sample2_o?react_perf">Sample 2 (Optimized)</Link>
-              <Link to="/sample2_o2?react_perf">Sample 2 (Optimized 2)</Link>
+    D = () => {
+        for (let i = 0; i < 1000000; i++) this.arr.push(i);
+    };
 
-              <Link to="/sample3?react_perf">Sample 3</Link>
-              <Link to="/sample3_o?react_perf">Sample 3 (Optimized)</Link>
+    E = () => {
+        for (let i = 0; i < 3000000; i++) this.arr.push(i);
+    };
 
-              <Link to="/sample4?react_perf">Sample 4</Link>
-              <Link to="/sample4_o?react_perf">Sample 4 (Optimized)</Link>
+    render() {
+        return (
+            <Provider store={store}>
+                <ConnectedRouter history={history}>
+                    <div className="app">
 
-              <Link to="/sample5?react_perf">Sample 5</Link>
-            </div>
+                        <div className="menu">
+                            <img src={logo}
+                                className="app-logo" 
+                                onClick={this.A} />
 
-            <div className="main">
-              <Route path="/sample1" component={Sample1} />
-              <Route path="/sample1_o" component={Sample1_O} />
-              <Route path="/sample2" component={Sample2} />
-              <Route path="/sample2_o" component={Sample2_O} />
-              <Route path="/sample2_o2" component={Sample2_O2} />
-              <Route path="/sample3" component={Sample3} />
-              <Route path="/sample3_o" component={Sample3_O} />
-              <Route path="/sample4" component={Sample4} />
-              <Route path="/sample4_o" component={Sample4_O} />
-              <Route path="/sample5" component={Sample5} />
-            </div>
+                            <Link to="/sample1?react_perf">Sample 1</Link>
+                            <Link to="/sample1_o?react_perf">Sample 1 (Optimized)</Link>
 
-          </div>
-        </ConnectedRouter>
-      </Provider>
-    );
-  }
+                            <Link to="/sample2?react_perf">Sample 2</Link>
+                            <Link to="/sample2_o?react_perf">Sample 2 (Optimized)</Link>
+                            <Link to="/sample2_o2?react_perf">Sample 2 (Optimized 2)</Link>
+
+                            <Link to="/sample3?react_perf">Sample 3</Link>
+                            <Link to="/sample3_o?react_perf">Sample 3 (Optimized)</Link>
+
+                            <Link to="/sample4?react_perf">Sample 4</Link>
+                            <Link to="/sample4_o?react_perf">Sample 4 (Optimized)</Link>
+
+                            <Link to="/sample5?react_perf">Sample 5</Link>
+                        </div>
+
+                        <div className="main">
+                            <Route path="/sample1" component={Sample1} />
+                            <Route path="/sample1_o" component={Sample1_O} />
+                            <Route path="/sample2" component={Sample2} />
+                            <Route path="/sample2_o" component={Sample2_O} />
+                            <Route path="/sample2_o2" component={Sample2_O2} />
+                            <Route path="/sample3" component={Sample3} />
+                            <Route path="/sample3_o" component={Sample3_O} />
+                            <Route path="/sample4" component={Sample4} />
+                            <Route path="/sample4_o" component={Sample4_O} />
+                            <Route path="/sample5" component={Sample5} />
+                        </div>
+
+                    </div>
+                </ConnectedRouter>
+            </Provider>
+        );
+    }
 }
 
 export default App;
