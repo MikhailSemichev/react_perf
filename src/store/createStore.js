@@ -6,6 +6,7 @@ import list1 from './list1';
 import list2 from './list2';
 import filter from './filter';
 import date from './date';
+import isSaving from './isSaving';
 
 export default function createAppStore(history) {
     const middleware = [thunk, routerMiddleware(history)];
@@ -24,6 +25,7 @@ export default function createAppStore(history) {
             list2,
             filter,
             date,
+            isSaving,
             router: routerReducer
         }),
         composeEnhancers(

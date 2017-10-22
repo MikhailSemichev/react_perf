@@ -60,7 +60,8 @@ class App extends Component {
 
                         <div className="menu">
                             <img src={logo}
-                                className="app-logo" 
+                                className="app-logo"
+                                alt="logo" 
                                 onClick={this.A} />
 
                             <Link to="/sample1?react_perf">Sample 1</Link>

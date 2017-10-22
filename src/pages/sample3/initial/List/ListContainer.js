@@ -11,8 +11,11 @@ import { loadList } from '../../../../store/list2';
         const filter = state.filter;
         
         return {
-            ids: ids.filter(id => values[id].name.includes(filter))
-        }
+            ids: ids,//.filter(id => values[id].name.toUpperCase()
+                //.includes(filter.toUpperCase())),
+            //
+            isSaving: state.isSaving
+        };
     },
     { loadList }
 )
@@ -22,7 +25,11 @@ class ListContainer extends Component {
     }
 
     render() {
-        return <ListView ids={this.props.ids} />;
+        return (
+            <ListView 
+                ids={this.props.ids}
+                isSaving={this.props.isSaving} />
+        );
     }
 }
 

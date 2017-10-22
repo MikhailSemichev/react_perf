@@ -1,5 +1,3 @@
-import service from '../api/service';
-
 export const SET_FILTER = 'SET_FILTER';
 
 export function setFilter(filter) {

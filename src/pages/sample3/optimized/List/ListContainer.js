@@ -10,6 +10,7 @@ const getFilteredIds = createSelector(
     state => state.list2.ids,
     state => state.list2.values,
     state => state.filter,
+    ///
     (ids, values, filter) => {
         return ids.filter(id => values[id].name.includes(filter));
     }

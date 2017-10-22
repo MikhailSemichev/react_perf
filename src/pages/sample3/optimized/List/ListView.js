@@ -1,11 +1,13 @@
 import React from 'react';
 
 import ItemContainer from '../Item/ItemContainer';
-import whyDidYouUpdate from '../../../../utils/whyDidYouUpdate';
+import SavingBlock from '../../../../components/SavingBlock';
 
 const ListView = ({ ids }) => {
     return (
         <div className="todo-list">
+            <SavingBlock/>
+            
             {ids.map(id => (
                 <ItemContainer
                     key={id}
@@ -16,4 +18,3 @@ const ListView = ({ ids }) => {
 }
 
 export default ListView;
-//export default whyDidYouUpdate(ListView);

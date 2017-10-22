@@ -23,7 +23,7 @@ const getFilteredIds = createSelector(
 )
 class ListContainer extends Component {
     componentDidMount() {
-        this.props.loadList(1000);
+        this.props.loadList(1000); //* 1000);
     }
 
     render() {

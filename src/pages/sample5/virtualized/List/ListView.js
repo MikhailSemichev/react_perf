@@ -27,6 +27,7 @@ class ListView extends Component {
                     {({ height, width }) => (
                         <List
                             key={ids.length}
+                            
                             height={height}
                             width={width} 
                             rowCount={ids.length}
