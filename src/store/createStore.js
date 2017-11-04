@@ -1,6 +1,8 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { routerReducer, routerMiddleware } from 'react-router-redux';
 import thunk from 'redux-thunk';
+import { batchedSubscribe } from 'redux-batched-subscribe';
+import debounce from 'lodash/debounce';
 
 import list1 from './list1';
 import list2 from './list2';
@@ -10,7 +12,6 @@ import isSaving from './isSaving';
 
 export default function createAppStore(history) {
     const middleware = [thunk, routerMiddleware(history)];
-    const enhancers = [];
     let composeEnhancers = compose;
 
     if (process.env.NODE_ENV === 'development') {
@@ -18,6 +19,9 @@ export default function createAppStore(history) {
             composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
         }
     }
+
+    const debounceNotify = debounce(notify => notify(), 10);
+    const enhancers = []; // [batchedSubscribe(debounceNotify)];
 
     return createStore(
         combineReducers({

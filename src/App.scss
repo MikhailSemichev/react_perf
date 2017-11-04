@@ -39,11 +39,22 @@ html, body, #root, .app {
   overflow-y: auto;
   height: 300px;
   flex: 1;
+  position: relative;
 }
 
 .app-logo {
   animation: app-logo-spin infinite 15s linear;
   height: 80px;
+}
+
+.saving-block {
+    position: absolute;
+    background: green;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.3;
 }
 
 .date-picker {

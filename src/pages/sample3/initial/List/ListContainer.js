@@ -10,8 +10,10 @@ import { loadList } from '../../../../store/list2';
         const values = state.list2.values;
         const filter = state.filter;
         
+        // debugger;
+
         return {
-            ids: ids,//.filter(id => values[id].name.toUpperCase()
+            ids: ids, // ids.filter(id => values[id].name.toUpperCase()
                 //.includes(filter.toUpperCase())),
             //
             isSaving: state.isSaving

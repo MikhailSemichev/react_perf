@@ -13,6 +13,11 @@ export function saveDate() {
                     type: SAVE_DATE, 
                     payload: new Date().toLocaleTimeString()
                 });
+                dispatch({ 
+                    type: SAVE_DATE, 
+                    payload: new Date().toLocaleTimeString()
+                });
+
                 dispatch(setIsSaving(false));
             }, () => {
                 dispatch(setIsSaving(false));

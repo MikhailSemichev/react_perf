@@ -5,11 +5,6 @@ import whyDidYouUpdate from '../../../utils/whyDidYouUpdate';
 
 // @whyDidYouUpdate
 class ListView extends PureComponent {
-
-    componentDidUpdate(prevProps, prevState) {
-        console.log(this.props.list === prevProps.list);
-    }
-
     render() {
         const { list, onToggle } = this.props;
 

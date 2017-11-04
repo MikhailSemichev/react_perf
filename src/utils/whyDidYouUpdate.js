@@ -15,8 +15,15 @@ import React, { Component } from 'react';
  * @example <caption>Usage as function</caption>
  * export default whyDidYouUpdate(MyReactComponent)
  */
+let firstLoad = true;
+
 const whyDidYouUpdate = ComposedComponent => class extends Component {
     componentDidUpdate(prevProps, prevState) {
+        if (firstLoad) { 
+            firstLoad = false; 
+            return; 
+        }
+        
         deepDiff({ props: prevProps, state: prevState },
             { props: this.props, state: this.state },
             ComposedComponent.constructor.displayName || ComposedComponent.name);

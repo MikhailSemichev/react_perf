@@ -40,15 +40,15 @@ class App extends Component {
     };
 
     C = () => {
-        this.D();
-        this.E();
+        this.С1();
+        this.С2();
     };
 
-    D = () => {
+    С1 = () => {
         for (let i = 0; i < 1000000; i++) this.arr.push(i);
     };
 
-    E = () => {
+    С2 = () => {
         for (let i = 0; i < 3000000; i++) this.arr.push(i);
     };
 

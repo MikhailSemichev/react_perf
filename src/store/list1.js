@@ -3,6 +3,7 @@ import service from '../api/service';
 export const LOAD_LIST1 = 'LOAD_LIST1';
 export const TOGGLE_TODO = 'TOGGLE_TODO';
 
+// Actions
 export function loadList1(count) {
     return dispatch => {
         return service.request(fakeData(count)).then(data => {
@@ -19,6 +20,7 @@ export function toggleTodo(id, isDone) {
     };
 };
 
+// Reducer
 export default function list1(state = [], action) {
     if (action.type === LOAD_LIST1) {
         return action.payload;
@@ -34,7 +36,7 @@ export default function list1(state = [], action) {
     return state;
 };
 
-///
+/// Fake data
 
 function fakeData(count) {
     let result = [];

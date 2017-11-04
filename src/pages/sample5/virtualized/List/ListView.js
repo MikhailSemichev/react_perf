@@ -10,6 +10,7 @@ class ListView extends Component {
 
     rowRenderer = ({index, key, style}) => {
         const itemId = this.ids[index];
+        
         return (
             <div key={key} style={style}>
                 <ItemContainer itemId={itemId} />
@@ -37,7 +38,6 @@ class ListView extends Component {
                     )}
                 </AutoSizer>
             </div>
-       
         );
     }
 }

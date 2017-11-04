@@ -20,7 +20,8 @@ class LazyDatePicker extends Component {
         const { isClicked } = this.state;
 
         if (!isClicked) {
-             return (
+            // Имитация настоящего DatePicker'а
+            return (
                 <span
                     onClick={this.onClick}
                     className="input-group">

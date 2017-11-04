@@ -9,7 +9,7 @@ const ListView = ({ ids, isSaving }) => {
     return (
         <div className="todo-list">
             {/*<SavingBlock/>*/}
-            {isSaving && <div>Saving...</div>}
+            {isSaving && <div className="saving-block">Saving...</div>}
             
             {ids.map(id => (
                 <ItemContainer

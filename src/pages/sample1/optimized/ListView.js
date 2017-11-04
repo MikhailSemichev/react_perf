@@ -1,6 +1,9 @@
 import React, { Component, PureComponent } from 'react';
 
 class ListView extends Component {
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props.list !== nextProps.list;
+    }
 
     // shouldComponentUpdate(nextProps, nextState) {
     //     return !shallowEqual(this.props, newProps) 
