@@ -28,15 +28,14 @@ const history = createHistory();
 const store = createAppStore(history);
 
 class App extends Component {
-    arr = [];
     A = () => {
-        for (let i = 0; i < 1000000; i++) this.arr.push(i);
+        for (let i = 0; i < 1000000; i++) Math.atan(i);
         this.B();
         this.C();
     };
 
     B = () => {
-        for (let i = 0; i < 1000000; i++) this.arr.push(i);
+        for (let i = 0; i < 1000000; i++) Math.atan(i);
     };
 
     C = () => {
@@ -45,11 +44,11 @@ class App extends Component {
     };
 
     С1 = () => {
-        for (let i = 0; i < 1000000; i++) this.arr.push(i);
+        for (let i = 0; i < 1000000; i++) Math.atan(i);
     };
 
     С2 = () => {
-        for (let i = 0; i < 3000000; i++) this.arr.push(i);
+        for (let i = 0; i < 3000000; i++) Math.atan(i);
     };
 
     render() {
@@ -64,12 +63,12 @@ class App extends Component {
                                 alt="logo" 
                                 onClick={this.A} />
 
-                            <Link to="/sample1?react_perf">Sample 1</Link>
-                            <Link to="/sample1_o?react_perf">Sample 1 (Optimized)</Link>
+                            <Link to="/sample1">Sample 1</Link>
+                            <Link to="/sample1_o">Sample 1 (Optimized)</Link>
 
-                            <Link to="/sample2?react_perf">Sample 2</Link>
-                            <Link to="/sample2_o?react_perf">Sample 2 (Optimized)</Link>
-                            <Link to="/sample2_o2?react_perf">Sample 2 (Optimized 2)</Link>
+                            <Link to="/sample2">Sample 2</Link>
+                            <Link to="/sample2_o">Sample 2 (Optimized)</Link>
+                            <Link to="/sample2_o2">Sample 2 (Optimized 2)</Link>
 
                             <Link to="/sample3?react_perf">Sample 3</Link>
                             <Link to="/sample3_o?react_perf">Sample 3 (Optimized)</Link>
