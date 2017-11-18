@@ -10,7 +10,7 @@ html, body, #root, .app {
 }
 
 .menu {
-  flex-basis: 200px;
+  flex-basis: 160px;
   background-color: #FFFFEE;
 
     a {
@@ -55,6 +55,7 @@ html, body, #root, .app {
     left: 0;
     right: 0;
     opacity: 0.3;
+    z-index: 5000;
 }
 
 .date-picker {
