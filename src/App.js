@@ -39,16 +39,7 @@ class App extends Component {
     };
 
     C = () => {
-        this.С1();
-        this.С2();
-    };
-
-    С1 = () => {
-        for (let i = 0; i < 1000000; i++) Math.atan(i);
-    };
-
-    С2 = () => {
-        for (let i = 0; i < 3000000; i++) Math.atan(i);
+        for (let i = 0; i < 2000000; i++) Math.atan(i);
     };
 
     render() {
