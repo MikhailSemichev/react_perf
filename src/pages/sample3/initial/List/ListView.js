@@ -4,7 +4,6 @@ import ItemContainer from '../Item/ItemContainer';
 import SavingBlock from '../../../../components/SavingBlock';
 import whyDidYouUpdate from '../../../../utils/whyDidYouUpdate';
 
-// can't use @whyDidYouUpdate decorator see below
 const ListView = ({ ids, isSaving }) => {
     return (
         <div className="todo-list">
@@ -20,4 +19,4 @@ const ListView = ({ ids, isSaving }) => {
     );
 }
 
-export default ListView; // whyDidYouUpdate(ListView);
+export default whyDidYouUpdate(ListView);
