@@ -15,12 +15,12 @@ import React, { Component } from 'react';
  * @example <caption>Usage as function</caption>
  * export default whyDidYouUpdate(MyReactComponent)
  */
-let firstLoad = true;
-
 const whyDidYouUpdate = ComposedComponent => class extends Component {
+    firstLoad = true;
+
     componentDidUpdate(prevProps, prevState) {
-        if (firstLoad) { 
-            firstLoad = false; 
+        if (this.firstLoad) { 
+            this.firstLoad = false; 
             return; 
         }
         

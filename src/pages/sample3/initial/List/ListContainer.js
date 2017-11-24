@@ -13,8 +13,7 @@ import { loadList } from '../../../../store/list2';
         // debugger;
 
         return {
-            ids: ids, // ids.filter(id => values[id].name.toUpperCase()
-                //.includes(filter.toUpperCase())),
+            ids: ids, // ids.filter(id => values[id].name.includes(filter)),
             //
             isSaving: state.isSaving
         };

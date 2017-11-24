@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 
 import whyDidYouUpdate from '../../../utils/whyDidYouUpdate';
 
-// @whyDidYouUpdate
+@whyDidYouUpdate
 class ListView extends PureComponent {
 
     componentDidUpdate(prevProps, prevState) {
